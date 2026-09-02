@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>fix ur heart</title>
+        <style>
+            .img_center {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+             .button {
+                background-color: red;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+            }
+             .button-bar {
+  position: fixed;
+  bottom: 20px;          /* distance from bottom of screen */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;             /* equal spacing between buttons */
+            }
+            body {
+                background-image: url('/Users/ellin/Desktop/kotomoko homepage 2/background1.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                overflow: hidden; /* Prevent scrolling */
+                margin: 0; /* Remove margin */
+                padding: 0; /* Remove padding */
+                width: 100vw; /* Prevent the page from resizing horizontally */
+                height: 100vh; /* Prevent the page from resizing vertically */
+                position: absolute;
+                overflow: hidden;
+            } 
+     </style>
+
+      </head>
+    <body>
+        
+        <style>
+.popover {
+    position: fixed;   /* CRITICAL */
+    inset: auto;       /* disables browser anchoring */
+    padding: 5px 10px;
+    background: white;
+    border: none;
+    box-sizing: border-box;
+    z-index: 9998;
+}
+
+
+.popover.music {
+    width: 370px;   /* Fixed width for music popover */
+    height: 350px;  /* Fixed height for music popover */
+}
+
+.popover.video {
+    width: 550px;  /* Fixed width for video popover */
+    height: 435px;  /* Fixed height for video popover */
+}
+
+.popover.nsrtd {
+    width: 460px;   /* Make it wider to accommodate SoundCloud player */
+    height: 350px;  /* You can adjust this height too if necessary */
+}
+
+.popover.nsrtd iframe {
+    width: 100%;  /* Make iframe responsive within its container */
+    height: 100%; /* Ensure iframe fills the popover */
+}
+
+
+.popover iframe {
+    width: 100%;    /* Make iframe responsive inside its container */
+    height: 100%;   /* Make iframe responsive inside its container */
+    border: none;   /* Remove border from iframe */
+}
+    </style>
+
+     <div class="button-bar">
+         <button data-pop="pop1">contact</button>
+         <button data-pop="pop2">music</button>
+         <button data-pop="pop3">video</button>
+         <button data-pop="pop4">nsrtd</button>
+         <button data-pop="pop5">obsessions</button>
+     </div>
+  
+
+     <div id="pop1" popover class="popover contact">
+         <p><a href="mailto:violettiastianpesuapina@gmail.com">email</a></p>
+         <p><a href="https://www.instagram.com/ellivirveli/">instagram</a></p>
+    </div>
+
+     <div id="pop2" popover class="popover music">
+         <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=63b2cc/minimal=true/transparent=true/" seamless><a href="https://kotomoko.bandcamp.com/album/ihan-t-ss-l-hell-laginen-riviiva">ihan tässä lähellä / laginen ääriviiva by kotomoko</a></iframe>
+         <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=63b2cc/minimal=true/transparent=true/" seamless><a href="https://kotomoko.bandcamp.com/track/verkossa">verkossa by kotomoko</a></iframe>
+     </div>
+
+     <div id="pop3" popover class="popover video">
+         <video width="530" height="415" controls>
+            <source src="/Users/ellin/Desktop/kotomoko homepage 2/videos/Network.mp4" type="video/mp4">
+        </video>
+        <video width="530" height="415" controls>
+            <source src="/Users/ellin/Desktop/kotomoko homepage 2/videos/ihan tassa lahella.mp4" type="video/mp4">
+        </video>
+     </div>
+
+     <div id="pop4" popover class="popover nsrtd">
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1786730712&color=%234c5c54&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    </div>
+
+    <div id="pop5" popover class="popover obsessions">
+        <p><a href="https://youtu.be/ydqOXHhtICs?si=APMAQXfItdTNnSOZ" target="_blank">falling deeper down the nostalgia hole each year - not sure if I even liked this back then but damn</a></p>
+        <p><a href="https://youtu.be/mH_z5vAkf2c?si=Ika8nAEPvKAlE3YZ" target="_blank">first I was persuaded into watching a 3 hour twilight video essee and now my life is like this</a></p>
+        <p><a href="https://youneedahearttolive.com/" target="_blank">best radio show</a></p>
+        <p><a href="https://www.youtube.com/@MemoriaMatters" target="_blank">i dont consider myself a gamer at all but she manages to amuse me always - this has made so many bad days a little bit less bad so many times</a></p>
+        <p><a href="https://youtu.be/6Xz351vqj4w?si=TFL_hZ8OYIHEdcIT" target="_blank">last 45 minutes of this live show is peak swans - also the whole yt channel is remarkable feat in documenting live shows by exceptional artists</a></p>
+        <p><a href="https://youtu.be/Rpy2O6fYiTk?si=avigtTBmP-uGLjFo" target="_blank">cute af</a></p>
+        <p><a href="https://youtu.be/EROA0JvHBf4?si=SksykraWDgUcW7B1" target="_blank">cute af</a></p>
+        <p><a href="https://www.svtplay.se/video/ja4ERxn/son?video=visa" target="_blank">amazing short documentary on graffiti, being a mother and a son. about dealing with loss, communicating it.</a>"</p>
+    </div>
+
+     <script>
+    // Function to change the background image on page load
+    function changeBackground() {
+        // Array of image file names
+        const images = [
+            "one.jpg", "two.jpg", "three.jpg", "four.jpg", "five.jpg",
+            "six.jpg", "seven.jpg", "eight.jpg", "nine.jpg", "ten.jpg",
+            "eleven.jpg", "twelve.jpg", "thirteen.jpg", "fourteen.jpg"
+        ];
+
+        // Get a random index from the images array
+        const randomIndex = Math.floor(Math.random() * images.length);
+
+        // Set the background image of the body
+        document.body.style.backgroundImage = `url('/Users/ellin/Desktop/kotomoko homepage 2/backgrounds/${images[randomIndex]}')`;
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.backgroundSize = 'cover';
+    }
+
+    // Call the function on page load
+    window.onload = changeBackground;
+</script>
+
+<script>
+function openPopoverRandom(popoverId) {
+    const pop = document.getElementById(popoverId);
+
+    // Open FIRST so dimensions are real
+    pop.showPopover();
+
+    // Measure AFTER opening
+    const w = pop.offsetWidth;
+    const h = pop.offsetHeight;
+
+    const margin = 40;
+    const maxX = window.innerWidth - w - margin;
+    const maxY = window.innerHeight - h - margin;
+
+    // If popover is bigger than screen, clamp to top-left margin
+    const x = Math.max(margin, Math.random() * maxX);
+    const y = Math.max(margin, Math.random() * maxY);
+
+    pop.style.left = `${x}px`;
+    pop.style.top = `${y}px`;
+}
+
+document.querySelectorAll('[data-pop]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        openPopoverRandom(btn.dataset.pop);
+    });
+});
+
+</script>
+
+<script>
+    // Ensure that popover embeds (iframe) fit within the available space
+function adjustSoundCloudEmbed(popoverId) {
+    const popover = document.getElementById(popoverId);
+    const iframe = popover.querySelector('iframe');
+    
+    if (iframe && popoverId === 'pop4') {  // Only for SoundCloud popovers (pop4)
+        // Ensure iframe adjusts to the popover's size
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+    }
+}
+
+document.querySelectorAll('[popovertarget]').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const popoverId = button.getAttribute('popovertarget');
+        openPopoverWithRandomPosition(popoverId);
+        adjustSoundCloudEmbed(popoverId);  // Ensure SoundCloud embed is correctly sized
+    });
+});
+
+</script>
+
+</body>
+</html>
