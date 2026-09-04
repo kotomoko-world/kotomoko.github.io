@@ -44,6 +44,144 @@
             } 
      </style>
 
+
+/* MOBILE PHONE LAYOUT
+
+@media (max-width: 600px) {
+
+    /* Keep the button bar at the bottom */
+    .button-bar {
+        position: fixed;
+        bottom: 10px;
+        left: 5px;
+        right: 5px;
+        transform: none;
+
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 5px;
+        z-index: 10000;
+    }
+
+    /* Make buttons fit across the screen */
+    .button-bar button {
+        flex: 1;
+        min-width: 0;
+
+        padding: 10px 4px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    /* ============================= */
+    /* ALL POPOVERS                  */
+    /* ============================= */
+
+    .popover {
+        position: fixed;
+
+        /* Don't allow popover to exceed screen */
+        left: 5vw !important;
+        right: 5vw !important;
+        top: 5vh !important;
+        bottom: auto !important;
+
+        width: 90vw !important;
+        max-width: 90vw !important;
+
+        height: auto !important;
+        max-height: 80vh !important;
+
+        margin: 0;
+        padding: 5px;
+
+        overflow: auto;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ============================= */
+    /* VIDEO POPOVER                 */
+    /* ============================= */
+
+    .popover.video {
+        width: 90vw !important;
+        max-width: 90vw !important;
+
+        height: auto !important;
+        max-height: 80vh !important;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .popover.video video {
+        display: block;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100%;
+    }
+
+
+    /* ============================= */
+    /* MUSIC POPOVER                 */
+    /* ============================= */
+
+    .popover.music {
+        width: 90vw !important;
+        max-width: 90vw !important;
+
+        height: auto !important;
+        max-height: 80vh !important;
+
+        overflow-y: auto;
+    }
+
+    .popover.music iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto;
+        min-height: 300px;
+    }
+
+
+    /* ============================= */
+    /* SOUNDCLOUD                    */
+    /* ============================= */
+
+    .popover.nsrtd {
+        width: 90vw !important;
+        max-width: 90vw !important;
+
+        height: 70vh !important;
+        max-height: 70vh !important;
+    }
+
+    .popover.nsrtd iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
+    /* ============================= */
+    /* GENERAL IFRAMES               */
+    /* ============================= */
+
+    .popover iframe {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
       </head>
     <body>
         
