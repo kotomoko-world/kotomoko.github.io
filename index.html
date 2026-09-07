@@ -49,6 +49,20 @@
     }
 </style>
 <style>
+    /* FLOATING BACKGROUND ANIMATION */
+#background-animation {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+
+  z-index: 1;
+  pointer-events: none;
+}
+</style>
+<style>
     /* unvisited link */
 a:link {
   color: black;
@@ -258,8 +272,15 @@ a:active {
 </style>
 
       </head>
-    <body>
-        
+<body>
+    <video id="background-animation"
+       autoplay
+       loop
+       muted
+       playsinline>
+  <source src="logo/kotologo.webm" type="video/webm">
+</video>
+
         <style>
 .popover {
     position: fixed;   /* CRITICAL */
