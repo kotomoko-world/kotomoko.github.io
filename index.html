@@ -68,6 +68,51 @@ a:hover {
 a:active {
   color: blue;
 }
+    /* VIDEO MENU */
+
+.video {
+    width: 550px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#video-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#video-menu a,
+.video-back {
+    color: black;
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+}
+
+#video-menu a:hover,
+.video-back:hover {
+    text-decoration: underline;
+}
+
+/* VIDEO PLAYER */
+
+#video-viewer {
+    display: none;
+}
+
+#video-player {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.video-back {
+    display: inline-block;
+}
+
 </style>
 
 <style>
@@ -234,7 +279,8 @@ a:active {
 
 .popover.video {
     width: 550px;  /* Fixed width for video popover */
-    height: 435px;  /* Fixed height for video popover */
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .popover.nsrtd {
@@ -275,14 +321,21 @@ a:active {
      </div>
 
      <div id="pop3" popover class="popover video">
-         <video width="530" height="415" controls>
-            <source src="videos/Network.webm" type="video/webm">
+
+    <div id="video-menu">
+        <a href="#" onclick="openVideo('network'); return false;">verkossa</a>
+        <a href="#" onclick="openVideo('ihan-tassa-lahella'); return false;">ihan tässä lähellä</a>
+    </div>
+
+    <div id="video-viewer">
+        <a href="#" class="video-back" onclick="backToVideoMenu(); return false;">← back</a>
+
+        <video id="video-player" controls>
+            <source id="video-source" src="" type="video/webm">
         </video>
-        <video width="530" height="415" controls>
-            <source src="videos/ihan-tassa-lahella.webm" type="video/webm">
-        </video>
-        <iframe width="530" height="415" src="https://www.youtube.com/embed/KV2QZAX3WOQ?si=NvlMY4jaDWWr7eeb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     </div>
+    </div>
+
+</div>
 
      <div id="pop4" popover class="popover nsrtd">
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
@@ -373,6 +426,46 @@ document.querySelectorAll('[popovertarget]').forEach(button => {
 });
 
 </script>
+
+        // Video player
+<script>
+
+function openVideo(videoName) {
+
+    const menu = document.getElementById('video-menu');
+    const viewer = document.getElementById('video-viewer');
+    const video = document.getElementById('video-player');
+    const source = document.getElementById('video-source');
+
+    const videos = {
+        'network': 'videos/Network.webm',
+        'ihan-tassa-lahella': 'videos/ihan-tassa-lahella.webm'
+    };
+
+    source.src = videos[videoName];
+
+    video.load();
+
+    menu.style.display = 'none';
+    viewer.style.display = 'block';
+}
+
+
+function backToVideoMenu() {
+
+    const menu = document.getElementById('video-menu');
+    const viewer = document.getElementById('video-viewer');
+    const video = document.getElementById('video-player');
+
+    video.pause();
+    video.currentTime = 0;
+
+    viewer.style.display = 'none';
+    menu.style.display = 'flex';
+}
+
+</script>
+
 
 </body>
 </html>
