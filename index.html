@@ -578,8 +578,8 @@ function openMusic(albumName) {
     const player = document.getElementById('music-player');
 
     const albums = {
-        'ihan-tassa-lahella': 'https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=333333/minimal=true/artwork=small/',
-        'verkossa': 'https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=63b2cc/minimal=true/artwork=small/'
+        'ihan-tassa-lahella': '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kotomoko.bandcamp.com/album/ihan-t-ss-l-hell-laginen-riviiva">ihan tässä lähellä / laginen ääriviiva by kotomoko</a></iframe>',
+        'verkossa': '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kotomoko.bandcamp.com/track/verkossa">verkossa by kotomoko</a></iframe>'
     };
 
     player.src = albums[albumName];
