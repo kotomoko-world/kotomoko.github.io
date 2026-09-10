@@ -142,7 +142,7 @@ a:active {
     max-height: 80vh !important;
     padding: 15px !important;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* MUSIC ALBUM MENU */
@@ -191,9 +191,9 @@ a:active {
     display: block;
     width: 350px !important;
     max-width: 100% !important;
-    height: 350px !important;
+    height: auto;
     border: none;
-    margin-top: 15px;
+    margin: 15px auto 0 auto;
 }
 
 .music-back {
@@ -578,15 +578,24 @@ function openMusic(albumName) {
     const player = document.getElementById('music-player');
 
     const albums = {
-        'ihan-tassa-lahella': '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kotomoko.bandcamp.com/album/ihan-t-ss-l-hell-laginen-riviiva">ihan tässä lähellä / laginen ääriviiva by kotomoko</a></iframe>,
-        'verkossa': '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kotomoko.bandcamp.com/track/verkossa">verkossa by kotomoko</a></iframe>'
+        'ihan-tassa-lahella': {
+            src: 'https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/',
+            height: 470
+        },
+
+        'verkossa': {
+            src: 'https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/',
+            height: 442
+        }
     };
 
-    player.src = albums[albumName];
+    player.src = albums[albumName].src;
+    player.style.height = albums[albumName].height + 'px';
 
     menu.style.display = 'none';
     viewer.style.display = 'block';
 }
+
 
 function backToMusicMenu() {
 
@@ -597,7 +606,7 @@ function backToMusicMenu() {
     player.src = '';
 
     viewer.style.display = 'none';
-    menu.style.display = 'flex';
+    menu.style.display = 'grid';
 }
 </script>
 
