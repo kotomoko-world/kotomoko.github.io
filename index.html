@@ -387,7 +387,7 @@ a:active {
     <!-- ALBUM MENU -->
     <div id="music-menu">
 
-        <a href="#" class="music-album" onclick="openMusic('new-album'); return false;">
+        <a href="#" class="music-album" onclick="openMusic('tama-jai-sanomatta'); return false;">
     <img src="covers/tama_jai_sanomatta.jpg" alt="tämä jäi sanomatta">
     <div class="music-album-title">tämä jäi sanomatta<br>(2026)</div>
 </a>
@@ -575,19 +575,23 @@ function openMusic(albumName) {
     const player = document.getElementById('music-player');
 
     const albums = {
-        'ihan-tassa-lahella': {
-            src: 'https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/',
-            height: 470
-        },
 
-        'verkossa': {
-            src: 'https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/',
-            height: 442
-        }
-    };
-   'tämä jäi sanomatta': {
-    src: 'https://bandcamp.com/EmbeddedPlayer/track=853149748/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/',
-    height: 470
+    'ihan-tassa-lahella': {
+        src: 'https://bandcamp.com/EmbeddedPlayer/album=3489736468/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/',
+        height: 470
+    },
+
+    'verkossa': {
+        src: 'https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/',
+        height: 442
+    },
+
+    'tama-jai-sanomatta': {
+        src: 'https://bandcamp.com/EmbeddedPlayer/track=853149748/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/',
+        height: 470
+    }
+
+};
 }
     player.src = albums[albumName].src;
     player.style.height = albums[albumName].height + 'px';
