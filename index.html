@@ -24,21 +24,21 @@
             }
              .button-bar {
   position: fixed;
-  bottom: 20px;          /* distance from bottom of screen */
+  bottom: 20px;          
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 20px;             /* equal spacing between buttons */
+  gap: 20px;             
             }
             body {
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
-                overflow: hidden; /* Prevent scrolling */
-                margin: 0; /* Remove margin */
-                padding: 0; /* Remove padding */
-                width: 100vw; /* Prevent the page from resizing horizontally */
-                height: 100vh; /* Prevent the page from resizing vertically */
+                overflow: hidden; 
+                margin: 0; 
+                padding: 0; 
+                width: 100vw; 
+                height: 100vh; 
                 position: absolute;
                 overflow: hidden;
             } 
@@ -65,22 +65,22 @@
 }
 </style>
 <style>
-    /* unvisited link */
+    
 a:link {
   color: black;
 }
 
-/* visited link */
+
 a:visited {
   color: grey;
 }
 
-/* mouse over link */
+
 a:hover {
   color: white;
 }
 
-/* selected link */
+
 a:active {
   color: blue;
 }
@@ -131,9 +131,8 @@ a:active {
 
 </style>
 <style>
-    /* ============================= */
+
 /* MUSIC POPOVER */
-/* ============================= */
 
 .popover.music {
     width: 390px !important;
@@ -211,6 +210,7 @@ a:active {
 </style>
 
 <style>
+    
 /* MOBILE PHONE LAYOUT */
 
 @media (max-width: 600px) {
@@ -219,7 +219,7 @@ a:active {
     background-position: center center;
 }
 
-    /* Keep the button bar at the bottom */
+    
     .button-bar {
         position: fixed;
         bottom: 10px;
@@ -236,7 +236,7 @@ a:active {
         z-index: 10000;
     }
 
-    /* Make buttons fit across the screen */
+   
     .button-bar button {
         flex: 1;
         min-width: 0;
@@ -247,14 +247,13 @@ a:active {
     }
 
 
-    /* ============================= */
-    /* ALL POPOVERS                  */
-    /* ============================= */
-
+   
+    /* ALL POPOVERS */
+   
     .popover {
         position: fixed;
 
-        /* Don't allow popover to exceed screen */
+        
         left: 5vw !important;
         right: 5vw !important;
         top: 5vh !important;
@@ -275,9 +274,9 @@ a:active {
     }
 
 
-    /* ============================= */
-    /* VIDEO POPOVER                 */
-    /* ============================= */
+    
+    /* VIDEO POPOVER */
+
 
     .popover.video {
         width: 90vw !important;
@@ -299,11 +298,7 @@ a:active {
         max-width: 100%;
     }
 
-
-
-    /* ============================= */
-    /* SOUNDCLOUD                    */
-    /* ============================= */
+    /* SOUNDCLOUD */
 
     .popover.nsrtd {
         width: 90vw !important;
@@ -318,10 +313,7 @@ a:active {
         height: 100% !important;
     }
 
-
-    /* ============================= */
-    /* GENERAL IFRAMES               */
-    /* ============================= */
+    /* GENERAL IFRAMES */
 
     .popover iframe {
         max-width: 100%;
@@ -342,8 +334,8 @@ a:active {
 
         <style>
 .popover {
-    position: fixed;   /* CRITICAL */
-    inset: auto;       /* disables browser anchoring */
+    position: fixed;  
+    inset: auto;      
     padding: 10px 10px;
     background: white;
     border: none;
@@ -353,25 +345,25 @@ a:active {
 
 
 .popover.video {
-    width: 550px;  /* Fixed width for video popover */
+    width: 550px;  
     padding: 15px;
     box-sizing: border-box;
 }
 
 .popover.nsrtd {
-    width: 460px;   /* Make it wider to accommodate SoundCloud player */
-    height: 350px;  /* You can adjust this height too if necessary */
+    width: 460px;  
+    height: 350px; 
 }
 
 .popover.nsrtd iframe {
-    width: 100%;  /* Make iframe responsive within its container */
-    height: 100%; /* Ensure iframe fills the popover */
+    width: 100%; 
+    height: 100%; 
 }
 
 
 .popover iframe {
-    width: 100%;    /* Make iframe responsive inside its container */
-    border: none;   /* Remove border from iframe */
+    width: 100%;  
+    border: none;  
 }
     </style>
 
@@ -409,7 +401,7 @@ a:active {
 
     </div>
 
-    <!-- BANDCAMP PLAYER -->
+
     <div id="music-viewer">
 
         <a href="#" class="music-back" onclick="backToMusicMenu(); return false;">← back</a>
@@ -450,9 +442,9 @@ a:active {
     </div>
 
      <script>
-    // Function to change the background image on page load
+  
     function changeBackground() {
-        // Array of image file names
+    
         const images = [
             "one.jpg", "two.jpg", "three.jpg", "four.jpg", "five.jpg",
             "six.jpg", "seven.jpg", "eight.jpg", "nine.jpg", "ten.jpg",
@@ -461,17 +453,16 @@ a:active {
             "twentyseven.JPG", "twentyeight.JPG",
         ];
 
-        // Get a random index from the images array
+       
         const randomIndex = Math.floor(Math.random() * images.length);
 
-        // Set the background image of the body
         document.body.style.backgroundImage = `url('backgrounds/${images[randomIndex]}')`;
         document.body.style.backgroundRepeat = 'no-repeat';
         document.body.style.backgroundAttachment = 'fixed';
         document.body.style.backgroundSize = 'cover';
     }
 
-    // Call the function on page load
+  
     window.onload = changeBackground;
 </script>
 
@@ -479,10 +470,10 @@ a:active {
 function openPopoverRandom(popoverId) {
     const pop = document.getElementById(popoverId);
 
-    // Open FIRST so dimensions are real
+
     pop.showPopover();
 
-    // Measure AFTER opening
+   
     const w = pop.offsetWidth;
     const h = pop.offsetHeight;
 
@@ -490,7 +481,7 @@ function openPopoverRandom(popoverId) {
     const maxX = window.innerWidth - w - margin;
     const maxY = window.innerHeight - h - margin;
 
-    // If popover is bigger than screen, clamp to top-left margin
+ 
     const x = Math.max(margin, Math.random() * maxX);
     const y = Math.max(margin, Math.random() * maxY);
 
@@ -507,13 +498,13 @@ document.querySelectorAll('[data-pop]').forEach(btn => {
 </script>
 
 <script>
-    // Ensure that popover embeds (iframe) fit within the available space
+
 function adjustSoundCloudEmbed(popoverId) {
     const popover = document.getElementById(popoverId);
     const iframe = popover.querySelector('iframe');
     
-    if (iframe && popoverId === 'pop4') {  // Only for SoundCloud popovers (pop4)
-        // Ensure iframe adjusts to the popover's size
+    if (iframe && popoverId === 'pop4') {  
+       
         iframe.style.width = '100%';
         iframe.style.height = '100%';
     }
@@ -523,7 +514,7 @@ document.querySelectorAll('[popovertarget]').forEach(button => {
     button.addEventListener('click', (event) => {
         const popoverId = button.getAttribute('popovertarget');
         openPopoverWithRandomPosition(popoverId);
-        adjustSoundCloudEmbed(popoverId);  // Ensure SoundCloud embed is correctly sized
+        adjustSoundCloudEmbed(popoverId);  
     });
 });
 
