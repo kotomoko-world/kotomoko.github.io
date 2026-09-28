@@ -490,8 +490,6 @@ a:active {
         white-space: nowrap;
     }
 
-
-   
     /* ALL POPOVERS */
    
     .popover {
@@ -516,11 +514,8 @@ a:active {
 
         box-sizing: border-box;
     }
-
-
     
     /* VIDEO POPOVER */
-
 
     .popover.video {
         width: 90vw !important;
@@ -564,6 +559,91 @@ a:active {
         box-sizing: border-box;
     }
 }
+</style>
+<style>
+
+.popover.popup-blobbed {
+    background: transparent !important;
+    border: none !important;
+}
+
+
+/* SVG BACKGROUND */
+
+.popup-blob {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    overflow: visible;
+}
+
+.popup-blob path {
+    fill: white;
+
+    stroke: black;
+    stroke-width: 1.3;
+
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.popover.popup-blobbed > :not(.popup-blob) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* INDIVIDUAL BLOB PERSONALITIES */
+
+/* CONTACT */
+.popup-blob-contact path {
+    stroke-width: 1.3;
+}
+
+
+/* MUSIC */
+.popup-blob-music path {
+    stroke-width: 1.4;
+}
+
+
+/* VIDEO  */
+.popup-blob-video path {
+    stroke-width: 1.3;
+}
+
+
+/* SOUNDCLOUD */
+.popup-blob-nsrtd path {
+    stroke-width: 1.3;
+}
+
+
+/* STUFF */
+.popup-blob-stuff path {
+    stroke-width: 1.2;
+}
+
+
+/*MOBILE*/
+@media (max-width: 600px) {
+
+    .popup-blob path {
+        stroke-width: 1.1;
+    }
+
+}
+
 </style>
 
       </head>
@@ -620,7 +700,7 @@ a:active {
      </div>
   
 
-<div id="pop1" popover class="popover contact">
+<div id="pop1" popover class="popover contact popup-blobbed"
 
     <svg
         class="contact-blob"
@@ -696,7 +776,38 @@ a:active {
 
 </div>
 
-   <div id="pop2" popover class="popover music">
+<div id="pop2" popover class="popover music popup-blobbed"
+
+    <svg class="popup-blob popup-blob-music"
+         viewBox="0 0 500 600"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+
+        <path d="
+            M 82,520
+            C 57,498 52,466 69,440
+            C 38,414 44,374 73,359
+            C 47,326 61,286 94,275
+            C 76,239 95,205 128,201
+            C 112,164 138,129 173,136
+            C 180,101 216,82 245,102
+            C 269,72 313,79 326,113
+            C 360,91 401,108 401,143
+            C 438,143 459,177 445,207
+            C 471,229 464,266 438,281
+            C 462,313 448,350 415,362
+            C 444,389 435,426 404,438
+            C 414,474 389,505 354,501
+            C 340,535 300,546 273,520
+            C 245,548 203,541 190,511
+            C 158,530 115,524 105,493
+            C 94,505 87,515 82,520
+            Z
+        " />
+    </svg>
+
+    <!-- ALBUM MENU -->
+    <div id="music-menu">
 
     <!-- ALBUM MENU -->
     <div id="music-menu">
@@ -729,8 +840,34 @@ a:active {
 
 </div>
 
+<div id="pop3" popover class="popover video popup-blobbed"
 
-     <div id="pop3" popover class="popover video">
+    <svg class="popup-blob popup-blob-video"
+         viewBox="0 0 600 420"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+
+        <path d="
+            M 78,337
+            C 49,318 48,284 67,263
+            C 39,239 47,203 78,191
+            C 62,157 83,125 117,121
+            C 112,87 143,63 174,73
+            C 194,43 232,42 252,67
+            C 281,43 322,53 331,83
+            C 365,65 402,82 404,116
+            C 442,104 474,127 470,160
+            C 509,158 534,190 518,220
+            C 551,240 544,278 514,290
+            C 529,322 501,350 469,345
+            C 449,377 409,378 388,353
+            C 357,382 315,374 304,344
+            C 271,374 228,366 215,337
+            C 181,360 143,350 134,321
+            C 111,344 87,343 78,337
+            Z
+        " />
+    </svg>
 
     <div id="video-menu">
         <a href="#" onclick="openVideo('network'); return false;">verkossa</a>
@@ -747,17 +884,77 @@ a:active {
 
 </div>
 
-     <div id="pop4" popover class="popover nsrtd">
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1786730712&color=%234c5c54&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
+<div id="pop4" popover class="popover nsrtd popup-blobbed"
 
-    <div id="pop5" popover class="popover stuff">
-        <p><a href="https://youneedahearttolive.com/" target="_blank">best radio show</a></p>
-        <p><a href="https://www.youtube.com/@MemoriaMatters" target="_blank">memoria plays so I don't have to</a></p>
-        <p><a href="https://andyshauf.bandcamp.com/track/satan" target="_blank">this sad ass song</a></p>
-        <p><a href="https://www.youtube.com/watch?v=NpjajskneA8&list=OLAK5uy_k5fRFltRD0zDcU3i7CgHYt3otWE_Pp5kI" target="_blank">album I've been waiting for 13 years</p>
-    </div>
+    <svg class="popup-blob popup-blob-nsrtd"
+         viewBox="0 0 500 400"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+
+        <path d="
+            M 67,319
+            C 48,294 56,264 78,248
+            C 49,224 57,189 88,180
+            C 72,149 93,119 124,116
+            C 117,82 147,58 177,69
+            C 196,38 235,39 250,67
+            C 276,45 316,53 324,84
+            C 355,66 392,79 394,111
+            C 428,106 452,131 446,159
+            C 475,169 481,201 460,220
+            C 477,249 457,278 429,280
+            C 436,311 411,337 382,327
+            C 362,358 321,357 303,332
+            C 274,360 234,351 222,323
+            C 193,347 154,337 146,308
+            C 117,328 82,328 67,319
+            Z
+        " />
+    </svg>
+
+    <iframe
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1786730712&color=%234c5c54&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+
+</div>
+
+<div id="pop5" popover class="popover stuff popup-blobbed"
+
+    <svg class="popup-blob popup-blob-stuff"
+         viewBox="0 0 440 300"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+
+        <path d="
+            M 66,232
+            C 43,211 49,181 71,166
+            C 54,138 72,109 101,107
+            C 98,76 126,54 153,66
+            C 174,38 211,44 222,72
+            C 248,49 285,57 292,87
+            C 321,73 351,91 350,119
+            C 384,119 403,146 391,171
+            C 416,193 405,225 378,232
+            C 371,263 337,275 312,258
+            C 287,281 249,274 235,248
+            C 209,270 173,265 161,239
+            C 132,256 93,251 89,225
+            C 79,235 72,237 66,232
+            Z
+        " />
+    </svg>
+
+    <p><a href="https://youneedahearttolive.com/" target="_blank">best radio show</a></p>
+    <p><a href="https://www.youtube.com/@MemoriaMatters" target="_blank">memoria plays so I don't have to</a></p>
+    <p><a href="https://andyshauf.bandcamp.com/track/satan" target="_blank">this sad ass song</a></p>
+    <p><a href="https://www.youtube.com/watch?v=NpjajskneA8&list=OLAK5uy_k5fRFltRD0zDcU3i7CgHYt3otWE_Pp5kI">album I've been waiting for 13 years</a></p>
+
+</div>
 
      <script>
   
