@@ -212,10 +212,110 @@ a:active {
     /* CONTACT POPUP */
 
 .popover.contact {
-    width: 440px;
-    max-width: 90vw;
-    padding: 18px 14px;
-    overflow: hidden;
+    width: 500px;
+    height: 330px;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    overflow: visible;
+}
+
+/* THE WONKY BLOB */
+
+.contact-blob {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+
+    z-index: 0;
+}
+
+.contact-blob path {
+    fill: white;
+}
+
+/* CONTENT */
+
+.contact-cloud-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 65px;
+
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+
+    text-align: center;
+}
+
+/* ASCII ROWS */
+
+.contact-row {
+    white-space: nowrap;
+    line-height: 1.8;
+}
+
+.contact-row:nth-child(1) {
+    transform: translateX(-10px);
+}
+
+.contact-row:nth-child(2) {
+    transform: translateX(15px);
+}
+
+.contact-row:nth-child(4) {
+    transform: translateX(-7px);
+}
+
+.contact-row:nth-child(5) {
+    transform: translateX(13px);
+}
+
+.contact-row:nth-child(6) {
+    transform: translateX(-15px);
+}
+
+/* LINKS */
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 12px 0;
+
+    white-space: nowrap;
+}
+
+.contact-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .contact-art {
@@ -330,6 +430,30 @@ a:active {
 <style>
     
 /* MOBILE PHONE LAYOUT */
+
+@media (max-width: 600px) {
+
+    .popover.contact {
+        width: 92vw !important;
+        max-width: 92vw !important;
+        height: 300px !important;
+
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    .contact-cloud-content {
+        padding: 45px 25px;
+        font-size: 11px;
+    }
+
+    .contact-links {
+        gap: 7px;
+        margin: 9px 0;
+    }
+}
+    
 
 @media (max-width: 600px) {
 
@@ -494,44 +618,81 @@ a:active {
      </div>
   
 
-     <div id="pop1" popover class="popover contact">
+<div id="pop1" popover class="popover contact">
 
-    <div class="contact-art">
+    <svg
+        class="contact-blob"
+        viewBox="0 0 500 330"
+        aria-hidden="true"
+    >
+        <path d="
+            M 86,258
 
-        <div class="contact-row row-1">
-            𓂃 　˖　 ﹒ 𖧧　﹒　  ﹏　˚　  ᭥ ⠀ ༏   .    ‏‏⸝⸝"     ︶
+            C 60,249 52,227 61,207
+            C 37,194 39,166 59,150
+            C 47,126 62,99 88,93
+
+            C 82,66 106,43 133,48
+            C 151,22 184,20 204,43
+            C 225,18 260,20 275,48
+
+            C 300,31 337,40 343,68
+            C 374,53 406,70 405,99
+            C 435,101 454,124 445,148
+            C 472,165 466,197 442,208
+
+            C 454,234 433,259 405,257
+            C 391,283 357,292 332,275
+            C 306,302 267,300 247,279
+            C 223,301 184,298 169,274
+
+            C 142,288 110,279 102,258
+            C 96,260 91,260 86,258
+
+            Z
+        " />
+    </svg>
+
+    <div class="contact-cloud-content">
+
+        <div class="contact-row">
+            ୨୧　˖　﹒ ‹𝟹　﹒　യ　˚　ᘝ　༏
         </div>
 
-        <div class="contact-row row-2">
-            ࿂　 ₊ 　·　𖧧 ⠀ ◡ ⠀  .　  ㅇ　　 
+        <div class="contact-row">
+            ୨୧　₊　·　꙳　 .　ㅇ　‹𝟹
         </div>
 
         <div class="contact-links">
-            <a href="mailto:violettiastianpesuapina@gmail.com">╰╮ email</a>
+            <a href="mailto:violettiastianpesuapina@gmail.com">
+                ♡ email
+            </a>
+
             <span>﹒</span>
-            <a href="https://www.instagram.com/ellivirveli/" target="_blank">instagram ᴗᴖ</a>
+
+            <a
+                href="https://www.instagram.com/ellivirveli/"
+                target="_blank"
+            >
+                instagram ୨୧
+            </a>
         </div>
 
-        <div class="contact-row row-3">
-            ˑ˚₊　·⠀˚　◌　｡　⋆　ᴖ⠀˚﹒　ଓ⠀
+        <div class="contact-row">
+            ˑ˚₊　·　˚　◌　｡　⋆　୧　˚﹒　ଓ
         </div>
 
-        <div class="contact-row row-4">
-            .　ㅇ　 ⁔‿ 　𓏼 ⠀༏　꣒ ⠀˚　 ፝֟‌    ⋆
+        <div class="contact-row">
+            .　ㅇ　‹𝟹　ᘝ　༏　୨୧　˚　⟡　⋆
         </div>
 
-        <div class="contact-links contact-links-lower">
-            <p>i play live, do comissions etc - come say hi</p>
-        </div>
-
-        <div class="contact-row row-5">
-            ⠀　⠀⁺ ⠀　　⠀ ˚₊⠀·　(ᴗ ᴗ ｡⠀ꜛ⠀
+        <div class="contact-row">
+            ⁺　˚₊　·　(ᴗ ᴗ ｡　ꜛ
         </div>
 
     </div>
 
 </div>
-
 
    <div id="pop2" popover class="popover music">
 
