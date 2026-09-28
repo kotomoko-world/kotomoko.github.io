@@ -131,26 +131,23 @@ a:active {
 
 </style>
         
+```html
 <style>
 
-/* =========================================================
-   MUSIC POPOVER
-   ========================================================= */
+/* MUSIC POPOVER */
 
 .popover.music {
-    width: 500px !important;
+    width: 560px !important;
     height: 600px !important;
     max-width: 90vw !important;
-    max-height: 80vh !important;
+    max-height: 85vh !important;
     padding: 0 !important;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible !important;
 }
 
 
-/* =========================================================
-   MUSIC ALBUM MENU
-   ========================================================= */
+/* MUSIC ALBUM MENU */
 
 #music-menu {
     position: relative;
@@ -165,26 +162,16 @@ a:active {
     grid-template-columns: 1fr 1fr;
 
     /*
-       This creates a safe area inside the cloud.
-       The blob gets narrower near the top and bottom,
-       so we keep the album grid away from those edges.
+       Keep the artwork comfortably inside
+       the cloud instead of right against its edge.
     */
-    padding: 65px 55px;
+    padding: 85px 70px;
 
-    /*
-       Center the entire collection vertically.
-    */
     align-content: center;
 
-    /*
-       Horizontal and vertical spacing between albums.
-    */
-    column-gap: 15px;
-    row-gap: 12px;
+    column-gap: 20px;
+    row-gap: 15px;
 }
-
-
-/* Individual album */
 
 .music-album {
     display: flex;
@@ -201,14 +188,11 @@ a:active {
     cursor: pointer;
 }
 
-
-/* Album artwork */
-
 .music-album img {
     display: block;
 
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
 
     max-width: 100%;
 
@@ -216,9 +200,6 @@ a:active {
 
     margin: 0 auto;
 }
-
-
-/* Album title */
 
 .music-album-title {
     margin-top: 7px;
@@ -228,33 +209,25 @@ a:active {
     line-height: 1.2;
 
     color: black;
-
     text-align: center;
 }
 
 
-/* =========================================================
-   MUSIC PLAYER
-   ========================================================= */
+/* MUSIC PLAYER */
 
 #music-viewer {
     position: relative;
     z-index: 1;
-
-    display: none;
 
     width: 100%;
     height: 100%;
 
     box-sizing: border-box;
 
-    padding: 70px 55px;
+    padding: 80px 70px;
 
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: none;
 }
-
 
 #music-player {
     display: block;
@@ -269,7 +242,6 @@ a:active {
     margin: 15px auto 0 auto;
 }
 
-
 .music-back {
     display: inline-block;
 
@@ -281,15 +253,12 @@ a:active {
     cursor: pointer;
 }
 
-
 .music-back:hover {
     text-decoration: underline;
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -298,28 +267,27 @@ a:active {
         height: 108vw !important;
 
         max-width: 90vw !important;
-        max-height: 80vh !important;
+        max-height: 85vh !important;
     }
 
     #music-menu {
-        padding: 50px 30px;
-
+        padding: 55px 35px;
         column-gap: 10px;
         row-gap: 8px;
     }
 
     .music-album img {
-        width: 105px;
-        height: 105px;
+        width: 100px;
+        height: 100px;
     }
 
     .music-album-title {
         font-size: 11px;
     }
-
 }
 
 </style>
+        
 <style>
     /* CONTACT POPUP */
 
