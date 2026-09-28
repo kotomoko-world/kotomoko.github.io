@@ -131,23 +131,30 @@ a:active {
 
 </style>
         
-```html
 <style>
 
-/* MUSIC POPOVER */
+/* =========================================================
+   MUSIC POPOVER
+   ========================================================= */
 
 .popover.music {
     width: 560px !important;
     height: 600px !important;
+
     max-width: 90vw !important;
     max-height: 85vh !important;
+
     padding: 0 !important;
+
     box-sizing: border-box;
+
     overflow: visible !important;
 }
 
 
-/* MUSIC ALBUM MENU */
+/* =========================================================
+   MUSIC ALBUM MENU
+   ========================================================= */
 
 #music-menu {
     position: relative;
@@ -162,20 +169,26 @@ a:active {
     grid-template-columns: 1fr 1fr;
 
     /*
-       Keep the artwork comfortably inside
-       the cloud instead of right against its edge.
+       Keep the artwork inside the comfortable
+       middle area of the cloud.
     */
-    padding: 85px 70px;
+    padding: 85px 85px;
 
     align-content: center;
 
-    column-gap: 20px;
-    row-gap: 15px;
+    /*
+       Bring the albums much closer together.
+    */
+    column-gap: 0;
+    row-gap: 5px;
 }
+
 
 .music-album {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
@@ -187,6 +200,9 @@ a:active {
 
     cursor: pointer;
 }
+
+
+/* Album artwork */
 
 .music-album img {
     display: block;
@@ -201,19 +217,26 @@ a:active {
     margin: 0 auto;
 }
 
+
+/* Album title */
+
 .music-album-title {
-    margin-top: 7px;
+    margin-top: 5px;
 
     font-family: "Courier New", monospace;
+
     font-size: 14px;
     line-height: 1.2;
 
     color: black;
+
     text-align: center;
 }
 
 
-/* MUSIC PLAYER */
+/* =========================================================
+   MUSIC PLAYER VIEW
+   ========================================================= */
 
 #music-viewer {
     position: relative;
@@ -224,26 +247,45 @@ a:active {
 
     box-sizing: border-box;
 
-    padding: 80px 70px;
+    /*
+       Keep everything in the central part
+       of the cloud.
+    */
+    padding: 70px 80px;
 
     display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
 }
+
+
+/* Bandcamp player */
 
 #music-player {
     display: block;
 
-    width: 350px !important;
+    width: 315px !important;
     max-width: 100% !important;
 
     height: auto;
 
     border: none;
 
-    margin: 15px auto 0 auto;
+    margin: 8px auto 0 auto;
 }
 
+
+/* Back button */
+
 .music-back {
-    display: inline-block;
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto;
 
     color: black;
     text-decoration: none;
@@ -251,14 +293,19 @@ a:active {
     font-family: "Courier New", monospace;
 
     cursor: pointer;
+
+    text-align: center;
 }
+
 
 .music-back:hover {
     text-decoration: underline;
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -270,20 +317,35 @@ a:active {
         max-height: 85vh !important;
     }
 
+
     #music-menu {
         padding: 55px 35px;
-        column-gap: 10px;
-        row-gap: 8px;
+
+        column-gap: 0;
+        row-gap: 3px;
     }
+
 
     .music-album img {
         width: 100px;
         height: 100px;
     }
 
+
     .music-album-title {
         font-size: 11px;
     }
+
+
+    #music-viewer {
+        padding: 55px 35px;
+    }
+
+
+    #music-player {
+        width: 280px !important;
+    }
+
 }
 
 </style>
