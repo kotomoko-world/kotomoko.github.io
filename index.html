@@ -1066,12 +1066,9 @@ a:active {
 }
 
 </style>
-
 <style>
 
-/* =========================================================
-   STUFF POPUP
-   ========================================================= */
+/* STUFF POPUP */
 
 .popover.stuff {
     width: 520px !important;
@@ -1088,12 +1085,11 @@ a:active {
     border: none !important;
 
     overflow: visible !important;
+
 }
 
 
-/* =========================================================
-   STUFF CONTENT
-   ========================================================= */
+/* STUFF CONTENT */
 
 .popover.stuff > p {
     position: relative;
@@ -1108,20 +1104,12 @@ a:active {
     line-height: 1.35;
 }
 
+.popover.stuff > p:first-of-type {
+    margin-top: 95px;
+}
 
-/*
-   Center the four links as one group.
-*/
-
-.popover.stuff {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
+.popover.stuff > p + p {
+    margin-top: 8px;
 }
 
 
@@ -1138,9 +1126,7 @@ a:active {
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -1150,13 +1136,19 @@ a:active {
 
         max-width: 90vw !important;
         max-height: 80vh !important;
-
-        gap: 5px;
     }
 
     .popover.stuff > p {
         font-size: 11px;
         line-height: 1.3;
+    }
+
+    .popover.stuff > p:first-of-type {
+        margin-top: 65px;
+    }
+
+    .popover.stuff > p + p {
+        margin-top: 5px;
     }
 
 }
