@@ -1067,6 +1067,102 @@ a:active {
 
 </style>
 
+<style>
+
+/* =========================================================
+   STUFF POPUP
+   ========================================================= */
+
+.popover.stuff {
+    width: 520px !important;
+    height: 350px !important;
+
+    max-width: calc(100vw - 80px) !important;
+    max-height: calc(100vh - 80px) !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box;
+
+    background: transparent !important;
+    border: none !important;
+
+    overflow: visible !important;
+}
+
+
+/* =========================================================
+   STUFF CONTENT
+   ========================================================= */
+
+.popover.stuff > p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+
+/*
+   Center the four links as one group.
+*/
+
+.popover.stuff {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+/* Links */
+
+.popover.stuff a {
+    color: black;
+    text-decoration: none;
+}
+
+.popover.stuff a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .popover.stuff {
+        width: 90vw !important;
+        height: 62vw !important;
+
+        max-width: 90vw !important;
+        max-height: 80vh !important;
+
+        gap: 5px;
+    }
+
+    .popover.stuff > p {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+}
+
+</style>
+
       </head>
 <body>
     <video id="background-animation"
@@ -1370,29 +1466,44 @@ a:active {
 
 <div id="pop5" popover class="popover stuff popup-blobbed">
 
-    <svg class="popup-blob popup-blob-stuff"
-         viewBox="0 0 440 300"
-         preserveAspectRatio="none"
-         aria-hidden="true">
 
-        <path d="
-            M 66,232
-            C 43,211 49,181 71,166
-            C 54,138 72,109 101,107
-            C 98,76 126,54 153,66
-            C 174,38 211,44 222,72
-            C 248,49 285,57 292,87
-            C 321,73 351,91 350,119
-            C 384,119 403,146 391,171
-            C 416,193 405,225 378,232
-            C 371,263 337,275 312,258
-            C 287,281 249,274 235,248
-            C 209,270 173,265 161,239
-            C 132,256 93,251 89,225
-            C 79,235 72,237 66,232
-            Z
-        " />
-    </svg>
+<svg class="popup-blob popup-blob-stuff"
+     viewBox="0 0 520 350"
+     preserveAspectRatio="none"
+     aria-hidden="true">
+
+    <path d="
+        M 67,270
+
+        C 39,247 46,211 72,194
+        C 38,169 50,132 84,119
+
+        C 55,88 72,54 111,50
+        C 108,19 137,-3 169,11
+
+        C 194,-15 238,-7 251,24
+        C 280,0 323,8 332,40
+
+        C 366,25 403,44 403,76
+        C 440,70 471,96 462,127
+
+        C 500,137 515,168 496,193
+        C 524,216 512,251 478,259
+
+        C 495,292 468,322 434,316
+        C 426,347 390,361 361,341
+
+        C 332,367 288,359 275,329
+        C 245,354 204,346 192,316
+
+        C 161,338 121,323 115,294
+        C 84,309 51,296 54,269
+
+        C 59,272 63,272 67,270
+
+        Z
+    " />
+</svg>
 
     <p><a href="https://youneedahearttolive.com/" target="_blank">best radio show</a></p>
     <p><a href="https://www.youtube.com/@MemoriaMatters" target="_blank">memoria plays so I don't have to</a></p>
