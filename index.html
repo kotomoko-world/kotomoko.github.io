@@ -208,6 +208,124 @@ a:active {
 }
 
 </style>
+<style>
+    /* CONTACT POPUP */
+
+.popover.contact {
+    width: 440px;
+    max-width: 90vw;
+    padding: 18px 14px;
+    overflow: hidden;
+}
+
+.contact-art {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+    color: black;
+}
+
+.contact-row {
+    white-space: nowrap;
+    overflow: hidden;
+    height: 26px;
+}
+
+.contact-row.row-1 {
+    transform: translateX(-12px);
+}
+
+.contact-row.row-2 {
+    transform: translateX(18px);
+}
+
+.contact-row.row-3 {
+    transform: translateX(-5px);
+}
+
+.contact-row.row-4 {
+    transform: translateX(14px);
+}
+
+.contact-row.row-5 {
+    transform: translateX(-18px);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-height: 34px;
+    margin: 3px 0;
+    white-space: nowrap;
+}
+
+.contact-links a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-links-lower {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .popover.contact {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        padding: 14px 5px;
+    }
+
+    .contact-art {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+    .contact-row {
+        height: 22px;
+    }
+
+    .contact-row.row-1 {
+        transform: translateX(-7px);
+    }
+
+    .contact-row.row-2 {
+        transform: translateX(7px);
+    }
+
+    .contact-row.row-3 {
+        transform: translateX(-3px);
+    }
+
+    .contact-row.row-4 {
+        transform: translateX(6px);
+    }
+
+    .contact-row.row-5 {
+        transform: translateX(-8px);
+    }
+
+    .contact-links {
+        gap: 7px;
+        font-size: 11px;
+    }
+}
+</style>
 
 <style>
     
@@ -377,9 +495,42 @@ a:active {
   
 
      <div id="pop1" popover class="popover contact">
-         <p><a href="mailto:violettiastianpesuapina@gmail.com">email</a></p>
-         <p><a href="https://www.instagram.com/ellivirveli/">instagram</a></p>
+
+    <div class="contact-art">
+
+        <div class="contact-row row-1">
+            ୨୧　˖　　　﹒ ‹𝟹　﹒　യ　˚　 ᘝ ⠀༏
+        </div>
+
+        <div class="contact-row row-2">
+            ୨୧　₊　·　⠀꙳ ⠀ .　ㅇ　　 ‹𝟹
+        </div>
+
+        <div class="contact-links">
+            <a href="mailto:violettiastianpesuapina@gmail.com">♡ email</a>
+            <span>﹒</span>
+            <a href="https://www.instagram.com/ellivirveli/" target="_blank">instagram ୨୧</a>
+        </div>
+
+        <div class="contact-row row-3">
+            ˑ˚₊　·⠀˚　◌　｡　⋆　୧⠀˚﹒　ଓ⠀
+        </div>
+
+        <div class="contact-row row-4">
+            .　ㅇ　　 ‹𝟹　 ᘝ ⠀༏　୨୧⠀˚　⟡　⋆
+        </div>
+
+        <div class="contact-links contact-links-lower">
+            <a>i play live, do comissions etc - come say hi n_n</a>
+        </div>
+
+        <div class="contact-row row-5">
+            ⠀　⠀⁺ ⠀　　⠀ ˚₊⠀·　(ᴗ ᴗ ｡⠀ꜛ⠀
+        </div>
+
     </div>
+
+</div>
 
 
    <div id="pop2" popover class="popover music">
