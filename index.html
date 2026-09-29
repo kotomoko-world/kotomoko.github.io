@@ -890,14 +890,16 @@ a:active {
 
 <style>
 
-/* VIDEO POPUP */
+/* =========================================================
+   VIDEO POPUP — CLOUD FRAME
+   ========================================================= */
 
 .popover.video {
-    width: 680px !important;
-    height: 500px !important;
+    width: 522px !important;
+    height: 320px !important;
 
-    max-width: calc(100vw - 80px) !important;
-    max-height: calc(100vh - 80px) !important;
+    max-width: calc(100vw - 30px) !important;
+    max-height: calc(100vh - 30px) !important;
 
     padding: 0 !important;
 
@@ -922,7 +924,6 @@ a:active {
     box-sizing: border-box;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
@@ -930,27 +931,7 @@ a:active {
 
     gap: 14px;
 
-
-    padding: 80px 100px;
-}
-
-
-#video-menu a {
-    display: block;
-
-    color: black;
-    text-decoration: none;
-
-    font-family: "Courier New", monospace;
-
-    text-align: center;
-
-    cursor: pointer;
-}
-
-
-#video-menu a:hover {
-    text-decoration: underline;
+    padding: 5px;
 }
 
 
@@ -972,7 +953,7 @@ a:active {
     align-items: center;
     justify-content: center;
 
-    padding: 60px 75px;
+    padding: 5px !important;
 }
 
 
@@ -986,7 +967,7 @@ a:active {
 
     height: auto !important;
 
-    margin: 0 auto;
+    margin: 0;
 
     border: none;
 }
@@ -999,7 +980,7 @@ a:active {
 
     width: fit-content;
 
-    margin: 7px auto 0 auto;
+    margin: 5px auto 0 auto;
 
     color: black;
 
@@ -1012,7 +993,6 @@ a:active {
     cursor: pointer;
 }
 
-
 .video-back:hover {
     text-decoration: underline;
 }
@@ -1023,42 +1003,29 @@ a:active {
 @media (max-width: 600px) {
 
     .popover.video {
-        width: 92vw !important;
-        height: 68vw !important;
+        width: calc(100vw - 30px) !important;
+        height: auto !important;
 
-        max-width: 92vw !important;
-        max-height: 80vh !important;
+        min-height: 300px;
 
-        overflow: visible !important;
+        max-width: calc(100vw - 30px) !important;
+        max-height: calc(100vh - 30px) !important;
     }
-
-
-    #video-menu {
-        padding: 45px 35px;
-
-        gap: 10px;
-    }
-
 
     #video-viewer {
-        padding: 40px 30px;
+        padding: 5px !important;
     }
-
 
     #video-player {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-
     .video-back {
-        margin-top: 8px;
-
+        margin-top: 5px;
         font-size: 12px;
     }
-
 }
-
 </style>
 <style>
 
