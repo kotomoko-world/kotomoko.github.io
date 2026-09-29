@@ -657,28 +657,50 @@ a:active {
         box-sizing: border-box;
     }
 
-/* =========================================================
-   VIDEO POPOVER
-   ========================================================= */
+/* VIDEO POPUP */
 
 .popover.video {
-    width: 680px !important;
-    height: 500px !important;
+    width: 530px !important;
+    height: 311px !important;
 
-    max-width: 90vw !important;
-    max-height: 85vh !important;
+    max-width: calc(100vw - 30px) !important;
+    max-height: calc(100vh - 30px) !important;
 
-    padding: 0 !important;
+    padding: 15px !important;
 
     box-sizing: border-box;
 
     overflow: visible !important;
+
+    background: transparent !important;
+    border: none !important;
 }
 
 
-/* =========================================================
-   VIDEO VIEWER
-   ========================================================= */
+/* VIDEO MENU */
+
+#video-menu {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 15px;
+}
+
+
+/* VIDEO VIEWER */
 
 #video-viewer {
     position: relative;
@@ -689,24 +711,18 @@ a:active {
 
     box-sizing: border-box;
 
-    /*
-       Keep the player and back button in the
-       comfortable middle of the cloud.
-    */
-    padding: 65px 75px;
-
-    display: flex;
+    display: none;
 
     flex-direction: column;
 
     align-items: center;
     justify-content: center;
+
+    padding: 0;
 }
 
 
-/* =========================================================
-   VIDEO PLAYER
-   ========================================================= */
+/* VIDEO PLAYER */
 
 #video-player {
     display: block;
@@ -714,24 +730,23 @@ a:active {
     width: 500px !important;
     max-width: 100% !important;
 
-    height: auto;
-
-    border: none;
+    height: auto !important;
 
     margin: 0 auto;
+
+    border: none;
 }
 
 
-/* =========================================================
-   VIDEO BACK BUTTON
-   ========================================================= */
+/* BACK BUTTON */
 
 .video-back {
     display: block;
 
-    width: fit-content;
+    position: absolute;
 
-    margin: 12px auto 0 auto;
+    left: 15px;
+    top: -22px;
 
     color: black;
 
@@ -741,7 +756,7 @@ a:active {
 
     cursor: pointer;
 
-    text-align: center;
+    z-index: 2;
 }
 
 .video-back:hover {
@@ -749,37 +764,44 @@ a:active {
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .popover.video {
-        width: 92vw !important;
-        height: 68vw !important;
+        width: calc(100vw - 30px) !important;
 
-        max-width: 92vw !important;
-        max-height: 85vh !important;
+        /*
+         * 16:9-ish video area + 30px horizontal padding.
+         * The popup keeps the same rectangular/cloud relationship
+         * rather than becoming a huge blob.
+         */
+        height: calc((100vw - 60px) * 0.5625 + 30px) !important;
+
+        max-width: calc(100vw - 30px) !important;
+        max-height: calc(100vh - 30px) !important;
+
+        padding: 15px !important;
     }
 
+    #video-menu {
+        padding: 15px;
+    }
 
     #video-viewer {
-        padding: 45px 30px;
+        padding: 0;
     }
-
 
     #video-player {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-
     .video-back {
-        margin-top: 8px;
+        left: 15px;
+        top: -20px;
         font-size: 12px;
     }
-
 }
 </style>
 <style>
@@ -1325,44 +1347,39 @@ a:active {
 <div id="pop3" popover class="popover video popup-blobbed">
 
 <svg class="popup-blob popup-blob-video"
-     viewBox="0 0 680 500"
+     viewBox="0 0 530 311"
      preserveAspectRatio="none"
      aria-hidden="true">
-
     <path d="
-        M 72,395
+        M 30,15
 
-        C 35,373 38,329 70,306
-        C 31,278 43,237 82,222
+        C 21,15 15,21 15,30
+        C 15,21 21,15 30,15
 
-        C 51,188 69,147 112,139
-        C 98,98 126,63 169,70
+        C 36,15 40,18 43,22
+        C 47,17 53,15 60,15
 
-        C 174,31 213,9 247,31
-        C 275,0 326,8 347,39
+        L 470,15
 
-        C 379,15 430,24 444,59
-        C 481,43 524,63 529,99
+        C 477,15 483,18 487,23
+        C 491,18 497,15 504,15
+        C 511,15 515,21 515,30
 
-        C 570,92 603,119 596,153
-        C 632,163 649,198 630,225
+        L 515,281
 
-        C 658,247 649,286 616,299
+        C 515,290 509,296 500,296
+        C 493,296 488,293 484,288
+        C 480,293 474,296 467,296
 
-        C 641,331 620,369 584,375
-        C 596,413 564,443 527,438
+        L 63,296
 
-        C 515,475 474,494 439,475
+        C 56,296 50,293 46,288
+        C 42,293 37,296 30,296
+        C 21,296 15,290 15,281
 
-        C 415,506 365,510 339,479
+        L 15,30
 
-        C 305,505 258,498 242,465
-
-        C 207,488 166,473 157,440
-
-        C 122,456 84,438 86,408
-
-        C 80,407 76,402 72,395
+        C 15,21 21,15 30,15
 
         Z
     " />
