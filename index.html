@@ -1053,8 +1053,6 @@ a:active {
     margin: 0;
 
     border: none;
-
-    transform: translate(-3px, -10px);
 }
 
 
@@ -1063,12 +1061,9 @@ a:active {
 .popover.video .video-back {
     display: block;
 
-    position: absolute;
+    position: static;
 
-    top: -20px;
-    left: 15px;
-
-    z-index: 2;
+    margin: 5px auto 0 auto;
 
     color: black;
     text-decoration: none;
@@ -1598,7 +1593,7 @@ function openVideo(videoName) {
     video.load();
 
     menu.style.display = 'none';
-    viewer.style.display = 'block';
+    viewer.style.display = 'flex';
 }
 
 
