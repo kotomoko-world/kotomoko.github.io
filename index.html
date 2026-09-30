@@ -85,15 +85,14 @@ a:active {
   color: blue;
 }
    </style>
-        
-<style>
+    <style>
         
 /* =========================================================
-   MUSIC POPUP — CLEAN CLOUD FRAME
+   MUSIC POPUP — SIMPLE WHITE BOX
    ========================================================= */
 
 .popover.music {
-    width: 460px !important;
+    width: 560px !important;
     height: 560px !important;
 
     max-width: calc(100vw - 30px) !important;
@@ -103,30 +102,23 @@ a:active {
     margin: 0 !important;
 
     box-sizing: border-box;
-    overflow: visible !important;
+    overflow: auto !important;
 
-    background: transparent !important;
+    background: white !important;
     border: none !important;
 }
 
 
-/* =========================================================
-   MUSIC ALBUM MENU
-   ========================================================= */
+/* MUSIC ALBUM MENU */
 
 #music-menu {
-    position: relative;
-    z-index: 1;
-
     width: 100%;
     height: 100%;
 
     box-sizing: border-box;
 
     display: grid;
-
     grid-template-columns: 120px 120px;
-    grid-auto-rows: auto;
 
     justify-content: center;
     align-content: center;
@@ -134,7 +126,7 @@ a:active {
     column-gap: 18px;
     row-gap: 18px;
 
-    padding: 45px 40px;
+    padding: 20px;
 }
 
 .music-album {
@@ -175,43 +167,38 @@ a:active {
 }
 
 
-/* Third album centered underneath */
+/* THIRD ALBUM CENTERED UNDERNEATH */
+
 .music-album:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
 }
 
 
-/* =========================================================
-   MUSIC PLAYER VIEW
-   ========================================================= */
+/* MUSIC PLAYER VIEW */
 
 #music-viewer {
-    position: relative;
-    z-index: 1;
-
     width: 100%;
     height: 100%;
 
     box-sizing: border-box;
 
-    padding: 20px 40px;
-
     display: none;
 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+
+    padding: 20px;
 }
 
 
-/* Back button */
+/* BACK BUTTON */
+
 .music-back {
     display: block;
 
     width: fit-content;
 
-    margin: 0 0 8px 0;
+    margin: 0 auto 8px auto;
 
     color: black;
     text-decoration: none;
@@ -227,7 +214,8 @@ a:active {
 }
 
 
-/* Bandcamp player */
+/* BANDCAMP PLAYER — LEAVE ITS SIZE ALONE */
+
 #music-player {
     display: block;
 
@@ -236,21 +224,19 @@ a:active {
 
     height: auto;
 
-    margin: 0;
+    margin: 0 auto;
 
     border: none;
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .popover.music {
         width: 90vw !important;
-        height: min(110vw, 85vh) !important;
+        height: 90vw !important;
 
         max-width: 90vw !important;
         max-height: 85vh !important;
@@ -262,7 +248,7 @@ a:active {
         column-gap: 14px;
         row-gap: 12px;
 
-        padding: 35px 20px;
+        padding: 20px;
     }
 
     .music-album {
@@ -279,7 +265,7 @@ a:active {
     }
 
     #music-viewer {
-        padding: 20px;
+        padding: 15px;
     }
 
     #music-player {
@@ -288,7 +274,6 @@ a:active {
     }
 }
     </style>
-        
 <style>
     /* CONTACT POPUP */
 
@@ -1183,79 +1168,7 @@ a:active {
 
 </div>
 
-<div id="pop2" popover class="popover music popup-blobbed">
-
-   <svg
-    class="popup-blob popup-blob-music"
-    viewBox="0 0 460 560"
-    preserveAspectRatio="none"
-    aria-hidden="true">
-
-   <path
-    transform="translate(0 0)"
-    d="
-    M 28 100
-
-    C 12 96, 8 82, 18 70
-    C 28 58, 42 58, 52 66
-    C 58 54, 72 48, 84 54
-    C 92 42, 108 38, 120 46
-    C 130 34, 146 32, 158 42
-    C 168 30, 184 30, 196 42
-    C 206 30, 222 30, 234 42
-    C 244 30, 260 30, 272 42
-    C 282 30, 298 30, 310 42
-    C 322 30, 338 32, 348 46
-    C 360 38, 376 42, 384 54
-    C 396 48, 410 54, 416 66
-    C 428 58, 442 58, 452 70
-    C 462 82, 458 96, 442 100
-
-    C 454 110, 454 126, 442 136
-    C 454 146, 454 162, 442 172
-    C 454 182, 454 198, 442 208
-    C 454 218, 454 234, 442 244
-    C 454 254, 454 270, 442 280
-    C 454 290, 454 306, 442 316
-    C 454 326, 454 342, 442 352
-    C 454 362, 454 378, 442 388
-    C 454 398, 454 414, 442 424
-    C 454 434, 454 450, 442 460
-    C 454 470, 454 486, 442 496
-
-    C 452 506, 448 520, 436 526
-    C 430 538, 416 542, 404 536
-    C 394 548, 378 552, 366 542
-    C 354 552, 338 552, 326 542
-    C 314 552, 298 552, 286 542
-    C 274 552, 258 552, 246 542
-    C 234 552, 218 552, 206 542
-    C 194 552, 178 552, 166 542
-    C 154 552, 138 552, 126 542
-    C 114 552, 98 548, 88 536
-    C 76 542, 62 538, 56 526
-    C 44 520, 40 506, 50 496
-
-    C 38 486, 38 470, 50 460
-    C 38 450, 38 434, 50 424
-    C 38 414, 38 398, 50 388
-    C 38 378, 38 362, 50 352
-    C 38 342, 38 326, 50 316
-    C 38 306, 38 290, 50 280
-    C 38 270, 38 254, 50 244
-    C 38 234, 38 218, 50 208
-    C 38 198, 38 182, 50 172
-    C 38 162, 38 146, 50 136
-    C 38 126, 40 110, 28 100
-
-    Z
-    "
-    fill="white"
-    stroke="black"
-    stroke-width="1.4"
-    stroke-linejoin="round"
-    stroke-linecap="round">
-</path>
+<div id="pop2" popover class="popover music">
        
     <!-- ALBUM MENU -->
     <div id="music-menu">
