@@ -94,13 +94,12 @@ a:active {
 
 .popover.music {
     width: 460px !important;
-    height: 650px !important;
+    height: 560px !important;
 
     max-width: calc(100vw - 30px) !important;
     max-height: calc(100vh - 30px) !important;
 
     padding: 0 !important;
-
     box-sizing: border-box;
 
     overflow: visible !important;
@@ -113,7 +112,7 @@ a:active {
 /* =========================================================
    MUSIC ALBUM MENU
    ========================================================= */
-
+    
 #music-menu {
     position: relative;
     z-index: 1;
@@ -124,21 +123,16 @@ a:active {
     box-sizing: border-box;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    /*
-       Keep the artwork inside the comfortable
-       middle area of the cloud.
-    */
-    padding: 85px 85px;
+    grid-template-columns: 120px 120px;
 
+    justify-content: center;
     align-content: center;
 
-    /*
-       Bring the albums much closer together.
-    */
-    column-gap: 5px;
-    row-gap: 5px;
+    column-gap: 18px;
+    row-gap: 18px;
+
+    padding: 50px 20px;
 }
 
 
@@ -1208,7 +1202,7 @@ a:active {
      preserveAspectRatio="none"
      aria-hidden="true">
 
-    <path d="
+   <path transform="translate(32 0)" d="
     M 58,10
 
     C 47,4 35,8 30,20
