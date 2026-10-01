@@ -87,9 +87,7 @@ a:active {
    </style>
     <style>
         
-/* =========================================================
-MUSIC POPUP
-========================================================= */
+/* MUSIC POPUP */
 
 .popover.music {
     width: 335px !important;
@@ -198,8 +196,21 @@ MUSIC POPUP
     margin: 0;
     border: none;
 }
-    </style>
+
+        @media (max-width: 600px) {
+    .popover.music {
+        width: calc(100vw - 20px) !important;
+        max-width: 335px !important;
+    }
+
+    #music-player {
+        width: 100% !important;
+        max-width: 315px !important;
+    }
+}
+</style>
 <style>
+    
     /* CONTACT POPUP */
 
 .popover.contact {
@@ -213,8 +224,6 @@ MUSIC POPUP
 
     overflow: visible;
 }
-
-/* THE WONKY BLOB */
 
 .contact-blob {
     position: absolute;
@@ -234,8 +243,6 @@ MUSIC POPUP
     stroke: black;
     stroke-width: 1.5;
 }
-
-/* CONTENT */
 
 .contact-cloud-content {
     position: relative;
@@ -621,9 +628,7 @@ MUSIC POPUP
 
 <style>
 
-/* =========================================================
-   VIDEO POPUP — CLOUD FRAME
-   ========================================================= */
+/* VIDEO POPUP — CLOUD FRAME */
 
 .popover.video {
     width: 550px !important;
@@ -732,28 +737,30 @@ MUSIC POPUP
 /* MOBILE */
 
 @media (max-width: 600px) {
-
     .popover.video {
-        width: calc(100vw - 30px) !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
         height: auto !important;
-
-        min-height: 300px;
-
-        max-width: calc(100vw - 30px) !important;
-        max-height: calc(100vh - 30px) !important;
+        max-height: 80vh !important;
     }
 
-    #video-viewer {
-        padding: 5px !important;
+    .popover.video .popup-blob-video {
+        width: 100%;
+        height: 100%;
     }
 
-    #video-player {
-        width: 100% !important;
-        max-width: 100% !important;
+    .popover.video .video-player-wrap {
+        width: 100%;
+        max-width: 500px;
     }
 
-    .video-back {
-        margin-top: 5px;
+    .popover.video #video-player {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .popover.video .video-back {
         font-size: 12px;
     }
 }
@@ -796,7 +803,7 @@ MUSIC POPUP
 }
 
 .popover.stuff > p:first-of-type {
-    margin-top: 65px;
+    margin-top: 45px;
 }
 
 .popover.stuff > p + p {
@@ -886,7 +893,7 @@ MUSIC POPUP
     border: none;
 }
             
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
     .popover.nsrtd {
         width: calc(100vw - 20px) !important;
         max-width: 480px !important;
@@ -895,7 +902,6 @@ MUSIC POPUP
 
     .popover.nsrtd iframe {
         width: 100% !important;
-        max-width: 460px !important;
         height: 300px !important;
     }
 }
