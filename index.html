@@ -197,17 +197,6 @@ a:active {
     border: none;
 }
 
-        @media (max-width: 600px) {
-    .popover.music {
-        width: calc(100vw - 20px) !important;
-        max-width: 335px !important;
-    }
-
-    #music-player {
-        width: 100% !important;
-        max-width: 315px !important;
-    }
-}
 </style>
 <style>
     
@@ -381,79 +370,12 @@ a:active {
     margin-bottom: 2px;
 }
 
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-    .popover.contact {
-        width: 90vw !important;
-        max-width: 90vw !important;
-        padding: 14px 5px;
-    }
-
-    .contact-art {
-        font-size: 11px;
-        line-height: 1.8;
-    }
-
-    .contact-row {
-        height: 22px;
-    }
-
-    .contact-row.row-1 {
-        transform: translateX(-7px);
-    }
-
-    .contact-row.row-2 {
-        transform: translateX(7px);
-    }
-
-    .contact-row.row-3 {
-        transform: translateX(-3px);
-    }
-
-    .contact-row.row-4 {
-        transform: translateX(6px);
-    }
-
-    .contact-row.row-5 {
-        transform: translateX(-8px);
-    }
-
-    .contact-links {
-        gap: 7px;
-        font-size: 11px;
-    }
-}
 </style>
 
 <style>
     
 /* MOBILE PHONE LAYOUT */
 
-@media (max-width: 600px) {
-
-    .popover.contact {
-        width: 92vw !important;
-        max-width: 92vw !important;
-        height: 300px !important;
-
-        padding: 0 !important;
-
-        overflow: visible !important;
-    }
-
-    .contact-cloud-content {
-        padding: 45px 25px;
-        font-size: 11px;
-    }
-
-    .contact-links {
-        gap: 7px;
-        margin: 9px 0;
-    }
-}
-    
 
 @media (max-width: 600px) {
 
@@ -487,23 +409,6 @@ a:active {
         font-size: 10px;
         white-space: nowrap;
     }
-
-    /* ALL POPOVERS */
-   
-.popover {
-    position: fixed;
-    left: 5vw !important;
-    right: 5vw !important;
-    top: 5vh !important;
-    bottom: auto !important;
-    width: 90vw !important;
-    max-width: 90vw !important;
-    height: auto !important;
-    max-height: 80vh !important;
-    margin: 0;
-    padding: 5px;
-    overflow: auto;
-    box-sizing: border-box;
 }
 
 </style>
@@ -725,38 +630,6 @@ a:active {
 .video-back:hover {
     text-decoration: underline;
 }
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-    .popover.video {
-        width: 90vw !important;
-        max-width: 90vw !important;
-        height: auto !important;
-        max-height: 80vh !important;
-    }
-
-    .popover.video .popup-blob-video {
-        width: 100%;
-        height: 100%;
-    }
-
-    .popover.video .video-player-wrap {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .popover.video #video-player {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .popover.video .video-back {
-        font-size: 12px;
-    }
-}
 </style>
 <style>
 
@@ -812,9 +685,125 @@ a:active {
     color: white;
     text-decoration: underline;
 }
-/* MOBILE */
+</style>
+<style>
+    /* =========================================================
+   MOBILE POPUPS
+   ========================================================= */
 
 @media (max-width: 600px) {
+
+    /* ALL POPUPS — CENTERED */
+
+    .popover {
+        position: fixed;
+
+        left: 50% !important;
+        right: auto !important;
+
+        top: 5vh !important;
+        bottom: auto !important;
+
+        transform: translateX(-50%) !important;
+
+        margin: 0 !important;
+
+        max-width: 90vw !important;
+        max-height: 80vh !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* CONTACT */
+
+    .popover.contact {
+        width: 92vw !important;
+        height: 300px !important;
+
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .contact-cloud-content {
+        padding: 45px 25px;
+        font-size: 11px;
+    }
+
+    .contact-art {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+    .contact-row {
+        height: 22px;
+    }
+
+    .contact-links {
+        gap: 7px;
+        margin: 9px 0;
+        font-size: 11px;
+    }
+
+
+    /* MUSIC */
+
+    .popover.music {
+        width: calc(100vw - 20px) !important;
+        max-width: 335px !important;
+    }
+
+    #music-player {
+        width: 100% !important;
+        max-width: 315px !important;
+    }
+
+
+    /* VIDEO */
+
+    .popover.video {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        height: auto !important;
+        max-height: 80vh !important;
+    }
+
+    .popover.video .popup-blob-video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .popover.video .video-player-wrap {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .popover.video #video-player {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .popover.video .video-back {
+        font-size: 12px;
+    }
+
+
+    /* SOUNDCLOUD */
+
+    .popover.nsrtd {
+        width: calc(100vw - 20px) !important;
+        max-width: 480px !important;
+        height: 500px !important;
+    }
+
+    .popover.nsrtd iframe {
+        width: 100% !important;
+        height: 480px !important;
+    }
+
+
+    /* STUFF */
 
     .popover.stuff {
         width: 90vw !important;
@@ -837,8 +826,13 @@ a:active {
         margin-top: 5px;
     }
 
-}
 
+    /* CLOUD OUTLINES */
+
+    .popup-blob path {
+        stroke-width: 1.1;
+    }
+}
 </style>
 
       </head>
@@ -886,19 +880,6 @@ a:active {
     border: none;
 }
             
-@media (max-width: 600px) {
-    .popover.nsrtd {
-        width: calc(100vw - 20px) !important;
-        max-width: 480px !important;
-        height: 500px !important;
-    }
-
-    .popover.nsrtd iframe {
-        width: 100% !important;
-        height: 480px !important;
-    }
-}
-
 
 .popover iframe {
     width: 100%;  
