@@ -874,13 +874,34 @@ a:active {
     display: block;
 
     width: 460px !important;
-    max-width: 100% !important;
     height: 300px !important;
 
     margin: 0;
     border: none;
 }
-            
+
+
+/* MOBILE SOUNDCLOUD */
+
+@media (max-width: 600px) {
+    .popover.nsrtd {
+        width: calc(100vw - 20px) !important;
+        max-width: calc(100vw - 20px) !important;
+
+        height: 500px !important;
+        max-height: none !important;
+
+        padding: 10px !important;
+    }
+
+    .popover.nsrtd iframe {
+        width: 100% !important;
+        max-width: none !important;
+
+        height: 480px !important;
+        min-height: 480px !important;
+    }
+}            
 
 .popover iframe {
     width: 100%;  
@@ -1431,8 +1452,8 @@ function adjustSoundCloudEmbed(popoverId) {
     
     if (iframe && popoverId === 'pop4') {  
        
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
+        iframe.style.width = '1';
+        iframe.style.height = '';
     }
 }
 
