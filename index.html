@@ -1128,6 +1128,10 @@ a:active {
     <!-- ALBUM MENU -->
     <div id="music-menu">
 
+        <a href="#" class="music-album" onclick="openMusic('naamapuisto'); return false;">
+            <img src="covers/naamapuisto.jpg" alt="naamapuisto">
+            <div class="music-album-title">naamapuisto<br>(2026)</div>
+
         <a href="#" class="music-album" onclick="openMusic('tama-jai-sanomatta'); return false;">
     <img src="covers/tama_jai_sanomatta.jpg" alt="tämä jäi sanomatta">
     <div class="music-album-title">tämä jäi sanomatta<br>(2026)</div>
@@ -1526,13 +1530,17 @@ function openMusic(albumName) {
 
     'verkossa': {
         src: 'https://bandcamp.com/EmbeddedPlayer/track=1932261953/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/',
-        height: 442
+        height: 470
     },
 
     'tama-jai-sanomatta': {
         src: 'https://bandcamp.com/EmbeddedPlayer/track=853149748/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/',
         height: 470
-    }
+    },
+
+    'naamapuisto': {
+        src: 'https://bandcamp.com/EmbeddedPlayer/album=3111992079/size=large/bgcol=ffffff/linkcol=63b2cc/minimal=true/transparent=true/',
+        height: 470
 };
     player.src = albums[albumName].src;
     player.style.height = albums[albumName].height + 'px';
